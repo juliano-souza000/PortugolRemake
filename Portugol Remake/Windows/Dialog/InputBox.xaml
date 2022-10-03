@@ -1,0 +1,59 @@
+﻿<Window x:Class="Portugol_Remake.Windows.Dialog.InputBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Portugol_Remake.Windows.Dialog"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Title="Input" Height="96.5" Width="350" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Resources>
+        <Image x:Key="CloseButton" Source="{DynamicResource CloseButtonIMG}" RenderOptions.BitmapScalingMode="NearestNeighbor" RenderOptions.EdgeMode="Aliased"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="18*"/>
+        </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Top" Background="Transparent" Height="25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="26*"/>
+                <ColumnDefinition Width="291*"/>
+                <ColumnDefinition Width="33*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="{DynamicResource IconIMG}" Margin="4,4,4,4" />
+            <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Right" Orientation="Horizontal" Grid.Column="2" Width="25">
+                <Button Width="25" Name="CloseButton" BorderBrush="{x:Null}" Content="{DynamicResource CloseButton}" Padding="5" Click="CloseButton_Click"/>
+            </StackPanel>
+            <Label x:Name="WindowTitle" Content="Input" Margin="10,0,30,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBox x:Name="InputText" Margin="10,10,10,0" TextWrapping="Wrap" KeyDown="InputText_KeyDown" Height="21" VerticalAlignment="Top" TextAlignment="Center">
+                <TextBox.Style>
+                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                        <Style.Resources>
+                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                <VisualBrush.Visual>
+                                    <Label Content="Digite aqui..." Foreground="LightGray" />
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Style.Resources>
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Background" Value="White" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <Button x:Name="okBTN" Content="OK" Margin="90,0,179,11" Click="okBTN_Click" Height="20" VerticalAlignment="Bottom" Grid.Row="1"/>
+            <Button x:Name="cancelBTN" Content="Cancelar" Margin="179,0,90,11" Click="cancelBTN_Click" Height="20" VerticalAlignment="Bottom" Grid.Row="1"/>
+        </Grid>
+    </Grid>
+</Window>

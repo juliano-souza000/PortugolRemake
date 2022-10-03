@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Portugol_Remake.Views.Process"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Portugol_Remake.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="35" d:DesignWidth="101">
+    <Grid>
+        <Rectangle x:Name="MainRectangle" Stroke="Black" StrokeThickness="1"/>
+        <TextBlock x:Name="MainText" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Rectangle x:Name="Top" Stroke="White" StrokeThickness="1" Width="5" Height="5" Margin="47.5,-2,47.5,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Rectangle x:Name="Left" Stroke="White" StrokeThickness="1" Width="5" Height="5" Margin="-2,10,0,10" HorizontalAlignment="Left" Visibility="Hidden"/>
+        <Rectangle x:Name="Bottom" Stroke="White" StrokeThickness="1" Width="5" Height="5" Margin="47.5,0,47.5,-2" VerticalAlignment="Bottom" Visibility="Hidden"/>
+        <Rectangle x:Name="Right" Stroke="White" StrokeThickness="1" Height="5"  Width="5" Margin="0,10,-2,10" HorizontalAlignment="Right" Visibility="Hidden"/>
+    </Grid>
+</UserControl>

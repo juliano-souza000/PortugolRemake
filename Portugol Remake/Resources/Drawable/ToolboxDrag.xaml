@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Viewbox Width="16" Height="16" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <Rectangle Width="16" Height="16">
+        <Rectangle.Fill>
+            <DrawingBrush Stretch="Uniform">
+                <DrawingBrush.Drawing>
+                    <DrawingGroup>
+                        <DrawingGroup.Children>
+                            <DrawingGroup ClipGeometry="F1 M 0.186134,0.5868L 4.7328,0.5868L 4.7328,7.80013L 0.186134,7.80013L 0.186134,0.5868 Z ">
+                                <DrawingGroup.Children>
+                                    <GeometryDrawing Geometry="F1 M 3.33333,3.73333L 4.26533,4.66667M 0.666667,1.06667L 1.6,2M 0.666667,6.4L 1.6,7.33333">
+                                        <GeometryDrawing.Pen>
+                                            <Pen Thickness="1.33333" Brush="#FF59A8DE"/>
+                                        </GeometryDrawing.Pen>
+                                    </GeometryDrawing>
+                                </DrawingGroup.Children>
+                            </DrawingGroup>
+                        </DrawingGroup.Children>
+                    </DrawingGroup>
+                </DrawingBrush.Drawing>
+            </DrawingBrush>
+        </Rectangle.Fill>
+    </Rectangle>
+</Viewbox>
